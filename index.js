@@ -34,19 +34,39 @@ const winterDiv = document.getElementById('winter')
 const springDiv = document.getElementById('spring')
 
 let addProduce = false 
-document.addEventListener('DOMContentLoaded', () => {
-    const addBtn = document.getElementById('new-produce-btn')
-    const form = document.getElementById('produce-form')
 
-    addBtn.addEventListener('click', () => {
-        addProduce = !addProduce;
-        if (addProduce){
-            form.style.display = "block";
-        } else {
-            form.style.display = "none";
-        }
-    })
+const addBtn = document.getElementById('new-produce-btn')
+const form = document.getElementById('produce-form')
 
+addBtn.addEventListener('click', () => {
+    addProduce = !addProduce;
+    if (addProduce){
+        form.style.display = "block";
+    } else {
+        form.style.display = "none";
+    }
+})
+
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    let season = e.target.season.value
+    let seasonOne = season.toLowerCase()
+    const newProduce = {
+        name: e.target.name.value,
+        vitamins: e.target.vitamins.value,
+        benefits: e.target.benefits.value,
+        image: e.target.image.value
+    }
+    if(seasonOne == 'summer') {
+        renderSummer(newProduce)
+    } else if (seasonOne == 'spring'){
+        renderSpring(newProduce)
+    } else if (seasonOne == 'winter'){
+        renderWinter(newProduce)
+    } else if (seasonOne == 'fall'){
+        renderFall(newProduce)
+    }
 })
 
 
@@ -56,13 +76,13 @@ function renderSummer(someProduce) {
     const produceName = document.createElement('h3')
     const produceImage = document.createElement('img')
     const produceVitamins = document.createElement('p')
-    const produceGoodFor = document.createElement('p')
+    const produceBenefits = document.createElement('p')
     produceName.innerText = someProduce.name
     produceImage.src = someProduce.image
     produceVitamins.innerText = "Vitamins: " + someProduce.vitamins
-    produceGoodFor.innerText = "Good For: " + someProduce['good-for']
+    produceBenefits.innerText = "Health Benefits: " + someProduce.benefits
 
-    produceDiv.append(produceName, produceImage, produceVitamins, produceGoodFor)
+    produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
     summerDiv.append(produceDiv)
 }
@@ -72,13 +92,13 @@ function renderFall(someProduce) {
     const produceName = document.createElement('h3')
     const produceImage = document.createElement('img')
     const produceVitamins = document.createElement('p')
-    const produceGoodFor = document.createElement('p')
+    const produceBenefits = document.createElement('p')
     produceName.innerText = someProduce.name
     produceImage.src = someProduce.image
     produceVitamins.innerText = "Vitamins: " + someProduce.vitamins
-    produceGoodFor.innerText = "Good For: " + someProduce['good-for']
+    produceBenefits.innerText = "Health Benefits: " + someProduce.benefits
 
-    produceDiv.append(produceName, produceImage, produceVitamins, produceGoodFor)
+    produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
     fallDiv.append(produceDiv)
 }
@@ -88,13 +108,13 @@ function renderWinter(someProduce) {
     const produceName = document.createElement('h3')
     const produceImage = document.createElement('img')
     const produceVitamins = document.createElement('p')
-    const produceGoodFor = document.createElement('p')
+    const produceBenefits = document.createElement('p')
     produceName.innerText = someProduce.name
     produceImage.src = someProduce.image
     produceVitamins.innerText = "Vitamins: " + someProduce.vitamins
-    produceGoodFor.innerText = "Good For: " + someProduce['good-for']
+    produceBenefits.innerText = "Health Benefits: " + someProduce.benefits
 
-    produceDiv.append(produceName, produceImage, produceVitamins, produceGoodFor)
+    produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
     winterDiv.append(produceDiv)
 }
@@ -104,13 +124,14 @@ function renderSpring(someProduce) {
     const produceName = document.createElement('h3')
     const produceImage = document.createElement('img')
     const produceVitamins = document.createElement('p')
-    const produceGoodFor = document.createElement('p')
+    const produceBenefits = document.createElement('p')
     produceName.innerText = someProduce.name
     produceImage.src = someProduce.image
     produceVitamins.innerText = "Vitamins: " + someProduce.vitamins
-    produceGoodFor.innerText = "Good For: " + someProduce['good-for']
+    produceBenefits.innerText = "Health Benefits: " + someProduce.benefits
 
-    produceDiv.append(produceName, produceImage, produceVitamins, produceGoodFor)
+    produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
     springDiv.append(produceDiv)
 }
+
