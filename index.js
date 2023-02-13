@@ -33,6 +33,7 @@ const fallDiv = document.getElementById('fall')
 const winterDiv = document.getElementById('winter')
 const springDiv = document.getElementById('spring')
 
+//hide and seek form
 let addProduce = false 
 
 const addBtn = document.getElementById('new-produce-btn')
@@ -47,7 +48,7 @@ addBtn.addEventListener('click', () => {
     }
 })
 
-
+//submit new produce form
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     let season = e.target.season.value
@@ -70,7 +71,7 @@ form.addEventListener('submit', (e) => {
 })
 
 
-
+//functions for rendering produce objects to page
 function renderSummer(someProduce) {
     const produceDiv = document.createElement('div')
     const produceName = document.createElement('h3')
