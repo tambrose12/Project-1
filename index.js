@@ -1,4 +1,4 @@
- 
+
 fetch("http://localhost:3000/summer")
     .then(r => r.json())
     .then(summerArray => summerArray.forEach((summerItem) => {
@@ -27,21 +27,21 @@ fetch("http://localhost:3000/spring")
     }
     ))
 
-  
+
 const summerDiv = document.getElementById('summer')
 const fallDiv = document.getElementById('fall')
 const winterDiv = document.getElementById('winter')
 const springDiv = document.getElementById('spring')
 
 //hide and seek form
-let addProduce = false 
+let addProduce = false
 
 const addBtn = document.getElementById('new-produce-btn')
 const form = document.getElementById('produce-form')
 
 addBtn.addEventListener('click', () => {
     addProduce = !addProduce;
-    if (addProduce){
+    if (addProduce) {
         form.style.display = "block";
     } else {
         form.style.display = "none";
@@ -59,13 +59,13 @@ form.addEventListener('submit', (e) => {
         benefits: e.target.benefits.value,
         image: e.target.image.value
     }
-    if(seasonOne == 'summer') {
+    if (seasonOne == 'summer') {
         renderSummer(newProduce)
-    } else if (seasonOne == 'spring'){
+    } else if (seasonOne == 'spring') {
         renderSpring(newProduce)
-    } else if (seasonOne == 'winter'){
+    } else if (seasonOne == 'winter') {
         renderWinter(newProduce)
-    } else if (seasonOne == 'fall'){
+    } else if (seasonOne == 'fall') {
         renderFall(newProduce)
     }
 })
@@ -80,7 +80,7 @@ function renderSummer(someProduce) {
     const produceBenefits = document.createElement('p')
     produceName.innerText = someProduce.name
     produceImage.src = someProduce.image
-    produceVitamins.innerText = "Vitamins: " + someProduce.vitamins
+    produceVitamins.innerText = "Vitamins & Nutrients: " + someProduce.vitamins
     produceBenefits.innerText = "Health Benefits: " + someProduce.benefits
 
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
@@ -96,7 +96,7 @@ function renderFall(someProduce) {
     const produceBenefits = document.createElement('p')
     produceName.innerText = someProduce.name
     produceImage.src = someProduce.image
-    produceVitamins.innerText = "Vitamins: " + someProduce.vitamins
+    produceVitamins.innerText = "Vitamins & Nutrients: " + someProduce.vitamins
     produceBenefits.innerText = "Health Benefits: " + someProduce.benefits
 
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
@@ -112,7 +112,7 @@ function renderWinter(someProduce) {
     const produceBenefits = document.createElement('p')
     produceName.innerText = someProduce.name
     produceImage.src = someProduce.image
-    produceVitamins.innerText = "Vitamins: " + someProduce.vitamins
+    produceVitamins.innerText = "Vitamins & Nutrients: " + someProduce.vitamins
     produceBenefits.innerText = "Health Benefits: " + someProduce.benefits
 
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
@@ -128,7 +128,7 @@ function renderSpring(someProduce) {
     const produceBenefits = document.createElement('p')
     produceName.innerText = someProduce.name
     produceImage.src = someProduce.image
-    produceVitamins.innerText = "Vitamins: " + someProduce.vitamins
+    produceVitamins.innerText = "Vitamins & Nutrients: " + someProduce.vitamins
     produceBenefits.innerText = "Health Benefits: " + someProduce.benefits
 
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
@@ -140,40 +140,40 @@ function renderSpring(someProduce) {
 
 const summerProduce = document.getElementById("summerproduce")
 summerProduce.addEventListener('mouseover', () => {
-    summerProduce.style.backgroundImage="url(https://images.unsplash.com/photo-1441981974669-8f9bc0978b64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHN1bW1lciUyMHN1bnNoaW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60)"
+    summerProduce.style.backgroundImage = "url(https://images.unsplash.com/photo-1441981974669-8f9bc0978b64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHN1bW1lciUyMHN1bnNoaW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60)"
 })
 
-summerProduce.addEventListener('mouseout', () => { 
-    summerProduce.style.backgroundImage= ""
+summerProduce.addEventListener('mouseout', () => {
+    summerProduce.style.backgroundImage = ""
 
 })
 
 const winterProduce = document.getElementById("winterproduce")
 winterProduce.addEventListener('mouseover', () => {
-    winterProduce.style.backgroundImage="url(https://www.wilsonpeakproperties.com/custimages/Big_Sky_Resort_Winter.jpeg)"
+    winterProduce.style.backgroundImage = "url(https://www.wilsonpeakproperties.com/custimages/Big_Sky_Resort_Winter.jpeg)"
 })
 
-winterProduce.addEventListener('mouseout', () => { 
-    winterProduce.style.backgroundImage= ""
+winterProduce.addEventListener('mouseout', () => {
+    winterProduce.style.backgroundImage = ""
 
 })
 
 const fallProduce = document.getElementById("fallproduce")
 fallProduce.addEventListener('mouseover', () => {
-    fallProduce.style.backgroundImage="url(https://images.unsplash.com/photo-1509224863479-ab583ee78692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80)"
+    fallProduce.style.backgroundImage = "url(https://images.unsplash.com/photo-1509224863479-ab583ee78692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80)"
 })
 
-fallProduce.addEventListener('mouseout', () => { 
-    fallProduce.style.backgroundImage= ""
+fallProduce.addEventListener('mouseout', () => {
+    fallProduce.style.backgroundImage = ""
 
 })
 
 const springProduce = document.getElementById("springproduce")
 springProduce.addEventListener('mouseover', () => {
-    springProduce.style.backgroundImage="url(https://images.unsplash.com/photo-1491036775913-3fbc5c455842?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNwcmluZyUyMHdpdGglMjByYWluJTIwYW5kJTIwZmxvd2Vyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60)"
+    springProduce.style.backgroundImage = "url(https://images.unsplash.com/photo-1491036775913-3fbc5c455842?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNwcmluZyUyMHdpdGglMjByYWluJTIwYW5kJTIwZmxvd2Vyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60)"
 })
 
-springProduce.addEventListener('mouseout', () => { 
-    springProduce.style.backgroundImage= ""
+springProduce.addEventListener('mouseout', () => {
+    springProduce.style.backgroundImage = ""
 
 })

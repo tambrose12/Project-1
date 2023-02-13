@@ -1,3 +1,10 @@
+/*
+body {
+    display: flex;
+    justify-content: center;
+}
+*/
+
 #header {
     color: white;
     background-color: #49699c;
