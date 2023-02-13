@@ -1,3 +1,4 @@
+ 
 fetch("http://localhost:3000/summer")
     .then(r => r.json())
     .then(summerArray => summerArray.forEach((summerItem) => {
@@ -26,10 +27,27 @@ fetch("http://localhost:3000/spring")
     }
     ))
 
+  
 const summerDiv = document.getElementById('summer')
 const fallDiv = document.getElementById('fall')
 const winterDiv = document.getElementById('winter')
 const springDiv = document.getElementById('spring')
+
+let addProduce = false 
+document.addEventListener('DOMContentLoaded', () => {
+    const addBtn = document.getElementById('new-produce-btn')
+    const form = document.getElementById('produce-form')
+
+    addBtn.addEventListener('click', () => {
+        addProduce = !addProduce;
+        if (addProduce){
+            form.style.display = "block";
+        } else {
+            form.style.display = "none";
+        }
+    })
+
+})
 
 
 

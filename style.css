@@ -10,3 +10,7 @@ img {
     height: auto;
     justify-self: center;
 }
+
+#produce-form {
+    display: none
+}
