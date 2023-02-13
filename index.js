@@ -143,3 +143,37 @@ summerProduce.addEventListener('mouseover', () => {
     summerProduce.style.backgroundImage="url(https://images.unsplash.com/photo-1441981974669-8f9bc0978b64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHN1bW1lciUyMHN1bnNoaW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60)"
 })
 
+summerProduce.addEventListener('mouseout', () => { 
+    summerProduce.style.backgroundImage= ""
+
+})
+
+const winterProduce = document.getElementById("winterproduce")
+winterProduce.addEventListener('mouseover', () => {
+    winterProduce.style.backgroundImage="url(https://www.wilsonpeakproperties.com/custimages/Big_Sky_Resort_Winter.jpeg)"
+})
+
+winterProduce.addEventListener('mouseout', () => { 
+    winterProduce.style.backgroundImage= ""
+
+})
+
+const fallProduce = document.getElementById("fallproduce")
+fallProduce.addEventListener('mouseover', () => {
+    fallProduce.style.backgroundImage="url(https://images.unsplash.com/photo-1509224863479-ab583ee78692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80)"
+})
+
+fallProduce.addEventListener('mouseout', () => { 
+    fallProduce.style.backgroundImage= ""
+
+})
+
+const springProduce = document.getElementById("springproduce")
+springProduce.addEventListener('mouseover', () => {
+    springProduce.style.backgroundImage="url(https://images.unsplash.com/photo-1491036775913-3fbc5c455842?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNwcmluZyUyMHdpdGglMjByYWluJTIwYW5kJTIwZmxvd2Vyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60)"
+})
+
+springProduce.addEventListener('mouseout', () => { 
+    springProduce.style.backgroundImage= ""
+
+})
