@@ -136,3 +136,10 @@ function renderSpring(someProduce) {
     springDiv.append(produceDiv)
 }
 
+// Mouseover Event
+
+const summerProduce = document.getElementById("summerproduce")
+summerProduce.addEventListener('mouseover', () => {
+    summerProduce.style.backgroundImage="url(https://images.unsplash.com/photo-1441981974669-8f9bc0978b64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHN1bW1lciUyMHN1bnNoaW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60)"
+})
+
