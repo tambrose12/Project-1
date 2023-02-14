@@ -88,6 +88,17 @@ function renderSummer(someProduce) {
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
     summerDiv.append(produceDiv)
+        // show cards on click
+        let addCard = false
+
+        summerProduce.addEventListener('click', () => {
+            addCard = !addCard;
+                if (addCard) {
+                    produceDiv.style.display = "inline-grid";
+                } else {
+                    produceDiv.style.display = "none";
+                }
+        })
 }
 
 function renderFall(someProduce) {
@@ -105,6 +116,17 @@ function renderFall(someProduce) {
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
     fallDiv.append(produceDiv)
+        // show cards on click
+        let addCard = false
+
+        fallProduce.addEventListener('click', () => {
+            addCard = !addCard;
+                if (addCard) {
+                    produceDiv.style.display = "inline-grid";
+                } else {
+                    produceDiv.style.display = "none";
+                }
+        })
 }
 
 function renderWinter(someProduce) {
@@ -122,6 +144,17 @@ function renderWinter(someProduce) {
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
     winterDiv.append(produceDiv)
+        // show cards on click
+        let addCard = false
+
+        winterProduce.addEventListener('click', () => {
+            addCard = !addCard;
+                if (addCard) {
+                    produceDiv.style.display = "inline-grid";
+                } else {
+                    produceDiv.style.display = "none";
+                }
+        })
 }
 
 function renderSpring(someProduce) {
@@ -139,6 +172,17 @@ function renderSpring(someProduce) {
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
     springDiv.append(produceDiv)
+    // show cards on click
+    let addCard = false
+
+        springProduce.addEventListener('click', () => {
+            addCard = !addCard;
+                if (addCard) {
+                    produceDiv.style.display = "inline-grid";
+                } else {
+                    produceDiv.style.display = "none";
+                }
+        })
 }
 
 // Mouseover Event

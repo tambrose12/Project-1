@@ -46,7 +46,7 @@ body {
 }
 
 img {
-    width: 8rem;
+    width: 4vw;
     height: auto;
     justify-self: center;
 }
@@ -75,7 +75,7 @@ img {
     padding-top: 5px;
     width: 15vw;
     height: 30vh;
-    display: inline-grid;
+    display: none;
     margin: 1vh 1vw; 
     margin-top: 0px;
     box-shadow: 3px 4px #e04b52;
@@ -84,4 +84,11 @@ img {
     
   }
 
-  
+  h3 {
+    margin: 3px;
+
+  }
+
+  p {
+    margin: 3px;
+  }
