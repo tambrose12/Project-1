@@ -69,6 +69,7 @@ form.addEventListener('submit', (e) => {
         renderFall(newProduce)
     }
 
+    e.target.reset()
 })
 
 //functions for rendering produce objects to page

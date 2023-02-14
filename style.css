@@ -17,7 +17,8 @@ h2 {
 
 .quarter {
     width: 50%;
-    height: 600px;
+    height: auto;
+    min-height: 40vh;
     text-align: center;
     background-position: center;
     background-repeat: no-repeat;
