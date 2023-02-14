@@ -68,9 +68,10 @@ form.addEventListener('submit', (e) => {
     } else if (seasonOne == 'fall') {
         renderFall(newProduce)
     }
+
 })
 
-
+// let summerAdd = false
 //functions for rendering produce objects to page
 function renderSummer(someProduce) {
     const produceDiv = document.createElement('div')
@@ -88,17 +89,22 @@ function renderSummer(someProduce) {
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
     summerDiv.append(produceDiv)
-        // show cards on click
-        let addCard = false
+    // show cards on click
 
-        summerProduce.addEventListener('click', () => {
-            addCard = !addCard;
-                if (addCard) {
-                    produceDiv.style.display = "inline-grid";
-                } else {
-                    produceDiv.style.display = "none";
-                }
-        })
+    // if (summerAdd) {
+    //     produceDiv.style.display = "inline-grid";
+    // } else {
+    //     produceDiv.style.display = "none";
+    // }
+    let addCard = false
+    summerProduce.addEventListener('click', () => {
+        addCard = !addCard;
+        if (addCard) {
+            produceDiv.style.display = "inline-grid";
+        } else {
+            produceDiv.style.display = "none";
+        }
+    })
 }
 
 function renderFall(someProduce) {
@@ -116,17 +122,17 @@ function renderFall(someProduce) {
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
     fallDiv.append(produceDiv)
-        // show cards on click
-        let addCard = false
+    // show cards on click
+    let addCard = false
 
-        fallProduce.addEventListener('click', () => {
-            addCard = !addCard;
-                if (addCard) {
-                    produceDiv.style.display = "inline-grid";
-                } else {
-                    produceDiv.style.display = "none";
-                }
-        })
+    fallProduce.addEventListener('click', () => {
+        addCard = !addCard;
+        if (addCard) {
+            produceDiv.style.display = "inline-grid";
+        } else {
+            produceDiv.style.display = "none";
+        }
+    })
 }
 
 function renderWinter(someProduce) {
@@ -144,22 +150,22 @@ function renderWinter(someProduce) {
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
     winterDiv.append(produceDiv)
-        // show cards on click
-        let addCard = false
+    // show cards on click
+    let addCard = false
 
-        winterProduce.addEventListener('click', () => {
-            addCard = !addCard;
-                if (addCard) {
-                    produceDiv.style.display = "inline-grid";
-                } else {
-                    produceDiv.style.display = "none";
-                }
-        })
+    winterProduce.addEventListener('click', () => {
+        addCard = !addCard;
+        if (addCard) {
+            produceDiv.style.display = "inline-grid";
+        } else {
+            produceDiv.style.display = "none";
+        }
+    })
 }
 
 function renderSpring(someProduce) {
     const produceDiv = document.createElement('div')
-    produceDiv.className = "spring-card"
+    produceDiv.className = "card"
     const produceName = document.createElement('h3')
     const produceImage = document.createElement('img')
     const produceVitamins = document.createElement('p')
@@ -173,16 +179,16 @@ function renderSpring(someProduce) {
 
     springDiv.append(produceDiv)
     // show cards on click
-    // let addCard = false
+    let addCard = false
 
-    //     springProduce.addEventListener('click', () => {
-    //         addCard = !addCard;
-    //             if (addCard) {
-    //                 produceDiv.style.display = "inline-grid";
-    //             } else {
-    //                 produceDiv.style.display = "none";
-    //             }
-    //     })
+    springProduce.addEventListener('click', () => {
+        addCard = !addCard;
+        if (addCard) {
+            produceDiv.style.display = "inline-grid";
+        } else {
+            produceDiv.style.display = "none";
+        }
+    })
 }
 
 // Mouseover Event
@@ -227,21 +233,28 @@ springProduce.addEventListener('mouseout', () => {
 
 })
 
-const cards = document.getElementsByClassName("card")
-const springCards = document.getElementsByClassName("spring-card")
-// show cards on click
-function showCards(springArray){
-    springArray.forEach((springCard) => {
-        let addCard = false
-        springProduce.addEventListener('click', () => {
-            addCard = !addCard;
-                if (addCard) {
-                    springCard.style.display = "inline-grid";
-                } else {
-                    springCard.style.display = "none";
-                }
-            })
-    })
-}
 
-showCards(springCards)
+
+
+// const cards = document.getElementsByClassName("card")
+// const spring = document.getElementsByClassName("spring-card")
+// console.log(Array.from(spring))
+
+
+
+// show cards on click
+// function showCards(springArray) {
+//     springArray.forEach((springCard) => {
+//         let addCard = false
+//         springProduce.addEventListener('click', () => {
+//             addCard = !addCard;
+//             if (addCard) {
+//                 springCard.style.display = "inline-grid";
+//             } else {
+//                 springCard.style.display = "none";
+//             }
+//         })
+//     })
+// }
+
+// showCards(springCards)
