@@ -1,3 +1,40 @@
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.quarter {
+    width: 50%;
+    height: 600px;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#summerproduce {
+    background-color: yellow;
+}
+
+#fallproduce {
+    background-color: orange;
+}
+
+#winterproduce {
+    background-color: aqua;
+}
+
+#springproduce {
+    background-color: violet;
+}
+
 /*
 body {
     display: flex;
@@ -8,8 +45,8 @@ body {
 #header {
     color: white;
     background-color: #49699c;
-    display: flex;
-    align-content: center;
+    text-align: center;
+    padding: 20px;
 }
 
 img {
