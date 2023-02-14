@@ -43,9 +43,17 @@ addBtn.addEventListener('click', () => {
     addProduce = !addProduce;
     if (addProduce) {
         form.style.display = "block";
+        if (form.style.display = "block") {
+            addBtn.textContent = "Hide Form"
+        }
     } else {
         form.style.display = "none";
+        if (form.style.display = "none") {
+            addBtn.textContent = "Add New Produce"
+        }
     }
+
+    
 })
 
 //submit new produce form
@@ -70,6 +78,7 @@ form.addEventListener('submit', (e) => {
     }
 
     e.target.reset()
+
 })
 
 //functions for rendering produce objects to page

@@ -18,16 +18,20 @@ h2 {
 .quarter {
     width: 50%;
     height: auto;
-    min-height: 40vh;
+    min-height: 400px;
     text-align: center;
     background-position: center;
     background-repeat: no-repeat;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 0;
 }
 
 #summerproduce {
-    background-color: yellow;
+    background-color: rgb(240, 220, 7);
+    color: white;
+    box-shadow: 3px 4px orange;
+
 }
 
 #fallproduce {
@@ -39,15 +43,16 @@ h2 {
 }
 
 #springproduce {
-    background-color: violet;
+    background-color: rgb(11, 218, 14);
 }
 
 #header {
     color: white;
-    background-color: #49699c;
+    background-color: violet ;
     text-align: center;
     padding: 20px;
     font-family: 'Helvetica', sans-serif;
+
 }
 
 img {
@@ -58,19 +63,27 @@ img {
 
 #produce-form {
     display: none;
-    background-color: red;
+    background-color: violet;
+    text-align: center;
+    border: solid;
+    border-color: violet;
+    
 
 }
 
 #btn {
-    background-color: aqua;
+    background-color: violet;
     margin: 0px;
-
+    height: 50px;
+    color: white;
 }
 
 #new-produce-btn {
-    background-color: pink;
-
+    background-color: rgb(161, 15, 117);
+    height: 40px;
+    border: solid white;
+    color: white;
+    border-radius: 12px;
 }
 
 .card {
@@ -112,4 +125,10 @@ h3 {
 
 p {
     margin: 3px;
+}
+
+#produce-form h3 {
+    margin: 0;
+    text-align: center;
+    color: white;
 }
