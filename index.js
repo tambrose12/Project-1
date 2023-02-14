@@ -71,7 +71,6 @@ form.addEventListener('submit', (e) => {
 
 })
 
-// let summerAdd = false
 //functions for rendering produce objects to page
 function renderSummer(someProduce) {
     const produceDiv = document.createElement('div')
@@ -82,29 +81,12 @@ function renderSummer(someProduce) {
     const produceBenefits = document.createElement('p')
     produceName.innerText = someProduce.name
     produceImage.src = someProduce.image
-    //produceDiv.style.backgroundImage = "someProduce.image"
     produceVitamins.innerText = "Vitamins & Nutrients: " + someProduce.vitamins
     produceBenefits.innerText = "Health Benefits: " + someProduce.benefits
 
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
     summerDiv.append(produceDiv)
-    // show cards on click
-
-    // if (summerAdd) {
-    //     produceDiv.style.display = "inline-grid";
-    // } else {
-    //     produceDiv.style.display = "none";
-    // }
-    let addCard = false
-    summerProduce.addEventListener('click', () => {
-        addCard = !addCard;
-        if (addCard) {
-            produceDiv.style.display = "inline-grid";
-        } else {
-            produceDiv.style.display = "none";
-        }
-    })
 }
 
 function renderFall(someProduce) {
@@ -121,18 +103,7 @@ function renderFall(someProduce) {
 
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
-    fallDiv.append(produceDiv)
-    // show cards on click
-    let addCard = false
-
-    fallProduce.addEventListener('click', () => {
-        addCard = !addCard;
-        if (addCard) {
-            produceDiv.style.display = "inline-grid";
-        } else {
-            produceDiv.style.display = "none";
-        }
-    })
+    fallDiv.append(produceDiv) 
 }
 
 function renderWinter(someProduce) {
@@ -150,17 +121,6 @@ function renderWinter(someProduce) {
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
     winterDiv.append(produceDiv)
-    // show cards on click
-    let addCard = false
-
-    winterProduce.addEventListener('click', () => {
-        addCard = !addCard;
-        if (addCard) {
-            produceDiv.style.display = "inline-grid";
-        } else {
-            produceDiv.style.display = "none";
-        }
-    })
 }
 
 function renderSpring(someProduce) {
@@ -177,18 +137,7 @@ function renderSpring(someProduce) {
 
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
-    springDiv.append(produceDiv)
-    // show cards on click
-    let addCard = false
-
-    springProduce.addEventListener('click', () => {
-        addCard = !addCard;
-        if (addCard) {
-            produceDiv.style.display = "inline-grid";
-        } else {
-            produceDiv.style.display = "none";
-        }
-    })
+    springDiv.append(produceDiv) 
 }
 
 // Mouseover Event
@@ -234,27 +183,44 @@ springProduce.addEventListener('mouseout', () => {
 })
 
 
-
-
-// const cards = document.getElementsByClassName("card")
-// const spring = document.getElementsByClassName("spring-card")
-// console.log(Array.from(spring))
-
-
-
 // show cards on click
-// function showCards(springArray) {
-//     springArray.forEach((springCard) => {
-//         let addCard = false
-//         springProduce.addEventListener('click', () => {
-//             addCard = !addCard;
-//             if (addCard) {
-//                 springCard.style.display = "inline-grid";
-//             } else {
-//                 springCard.style.display = "none";
-//             }
-//         })
-//     })
-// }
+let addSummerCard = false 
+let addFallCard = false 
+let addSpringCard = false 
+let addWinterCard = false 
 
-// showCards(springCards)
+summerProduce.addEventListener('click', () => {
+    addSummerCard = !addSummerCard;
+    if (addSummerCard) {
+        summerDiv.style.display = "block";
+    } else {
+        summerDiv.style.display = "none";
+    }
+})
+
+fallProduce.addEventListener('click', () => {
+    addFallCard = !addFallCard;
+    if (addFallCard) {
+        fallDiv.style.display = "block";
+    } else {
+        fallDiv.style.display = "none";
+    }
+})
+
+springProduce.addEventListener('click', () => {
+    addSpringCard = !addSpringCard;
+    if (addSpringCard) {
+        springDiv.style.display = "block";
+    } else {
+        springDiv.style.display = "none";
+    }
+})
+
+winterProduce.addEventListener('click', () => {
+    addWinterCard = !addWinterCard;
+    if (addWinterCard) {
+        winterDiv.style.display = "block";
+    } else {
+        winterDiv.style.display = "none";
+    }
+})

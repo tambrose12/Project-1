@@ -79,13 +79,29 @@ img {
     padding-top: 5px;
     width: 15vw;
     height: 30vh;
-    display: none;
+    display: inline-grid;
     margin: 1vh 1vw;
     margin-top: 0px;
     box-shadow: 3px 4px #e04b52;
     background-color: whitesmoke;
 
 
+}
+
+#summer {
+    display: none
+}
+
+#spring {
+    display: none
+}
+
+#fall {
+    display: none
+}
+
+#winter {
+    display: none
 }
 
 h3 {
