@@ -74,12 +74,14 @@ form.addEventListener('submit', (e) => {
 //functions for rendering produce objects to page
 function renderSummer(someProduce) {
     const produceDiv = document.createElement('div')
+    produceDiv.className = "card"
     const produceName = document.createElement('h3')
     const produceImage = document.createElement('img')
     const produceVitamins = document.createElement('p')
     const produceBenefits = document.createElement('p')
     produceName.innerText = someProduce.name
     produceImage.src = someProduce.image
+    //produceDiv.style.backgroundImage = "someProduce.image"
     produceVitamins.innerText = "Vitamins & Nutrients: " + someProduce.vitamins
     produceBenefits.innerText = "Health Benefits: " + someProduce.benefits
 
@@ -90,6 +92,7 @@ function renderSummer(someProduce) {
 
 function renderFall(someProduce) {
     const produceDiv = document.createElement('div')
+    produceDiv.className = "card"
     const produceName = document.createElement('h3')
     const produceImage = document.createElement('img')
     const produceVitamins = document.createElement('p')
@@ -106,6 +109,7 @@ function renderFall(someProduce) {
 
 function renderWinter(someProduce) {
     const produceDiv = document.createElement('div')
+    produceDiv.className = "card"
     const produceName = document.createElement('h3')
     const produceImage = document.createElement('img')
     const produceVitamins = document.createElement('p')
@@ -122,6 +126,7 @@ function renderWinter(someProduce) {
 
 function renderSpring(someProduce) {
     const produceDiv = document.createElement('div')
+    produceDiv.className = "card"
     const produceName = document.createElement('h3')
     const produceImage = document.createElement('img')
     const produceVitamins = document.createElement('p')

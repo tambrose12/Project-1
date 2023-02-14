@@ -17,6 +17,8 @@ body {
     text-align: center;
     background-position: center;
     background-repeat: no-repeat;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #summerproduce {
@@ -35,27 +37,51 @@ body {
     background-color: violet;
 }
 
-
-/*
-body {
-    display: flex;
-    justify-content: center;
-}
-*/
-
 #header {
     color: white;
     background-color: #49699c;
     text-align: center;
     padding: 20px;
+    font-family: 'Helvetica', sans-serif;
 }
 
 img {
-    width: 12rem;
+    width: 8rem;
     height: auto;
     justify-self: center;
 }
 
 #produce-form {
-    display: none
+    display: none;
+    background-color: red;
+
 }
+
+#btn {
+    background-color: aqua;
+    margin: 0px;
+    
+}
+
+#new-produce-btn {
+    background-color: pink;
+    
+}
+
+.card {
+    text-align: center;
+    border: grey solid 1px;
+    padding: 5px;
+    padding-top: 5px;
+    width: 15vw;
+    height: 30vh;
+    display: inline-grid;
+    margin: 1vh 1vw; 
+    margin-top: 0px;
+    box-shadow: 3px 4px #e04b52;
+    background-color: whitesmoke;
+
+    
+  }
+
+  
