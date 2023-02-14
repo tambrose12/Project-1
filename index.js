@@ -159,7 +159,7 @@ function renderWinter(someProduce) {
 
 function renderSpring(someProduce) {
     const produceDiv = document.createElement('div')
-    produceDiv.className = "card"
+    produceDiv.className = "spring-card"
     const produceName = document.createElement('h3')
     const produceImage = document.createElement('img')
     const produceVitamins = document.createElement('p')
@@ -173,16 +173,16 @@ function renderSpring(someProduce) {
 
     springDiv.append(produceDiv)
     // show cards on click
-    let addCard = false
+    // let addCard = false
 
-        springProduce.addEventListener('click', () => {
-            addCard = !addCard;
-                if (addCard) {
-                    produceDiv.style.display = "inline-grid";
-                } else {
-                    produceDiv.style.display = "none";
-                }
-        })
+    //     springProduce.addEventListener('click', () => {
+    //         addCard = !addCard;
+    //             if (addCard) {
+    //                 produceDiv.style.display = "inline-grid";
+    //             } else {
+    //                 produceDiv.style.display = "none";
+    //             }
+    //     })
 }
 
 // Mouseover Event
@@ -226,3 +226,22 @@ springProduce.addEventListener('mouseout', () => {
     springProduce.style.backgroundImage = ""
 
 })
+
+const cards = document.getElementsByClassName("card")
+const springCards = document.getElementsByClassName("spring-card")
+// show cards on click
+function showCards(springArray){
+    springArray.forEach((springCard) => {
+        let addCard = false
+        springProduce.addEventListener('click', () => {
+            addCard = !addCard;
+                if (addCard) {
+                    springCard.style.display = "inline-grid";
+                } else {
+                    springCard.style.display = "none";
+                }
+            })
+    })
+}
+
+showCards(springCards)
