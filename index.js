@@ -53,7 +53,7 @@ addBtn.addEventListener('click', () => {
         }
     }
 
-    
+
 })
 
 //submit new produce form
@@ -91,8 +91,8 @@ function renderSummer(someProduce) {
     const produceBenefits = document.createElement('p')
     produceName.innerText = someProduce.name
     produceImage.src = someProduce.image
-    produceVitamins.innerText = "Vitamins & Nutrients: " + someProduce.vitamins
-    produceBenefits.innerText = "Health Benefits: " + someProduce.benefits
+    produceVitamins.textContent = "Vitamins & Nutrients:   " + someProduce.vitamins
+    produceBenefits.textContent = "Health Benefits:   " + someProduce.benefits
 
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
@@ -108,12 +108,12 @@ function renderFall(someProduce) {
     const produceBenefits = document.createElement('p')
     produceName.innerText = someProduce.name
     produceImage.src = someProduce.image
-    produceVitamins.innerText = "Vitamins & Nutrients: " + someProduce.vitamins
-    produceBenefits.innerText = "Health Benefits: " + someProduce.benefits
+    produceVitamins.innerText = "Vitamins & Nutrients:   " + someProduce.vitamins
+    produceBenefits.innerText = "Health Benefits:   " + someProduce.benefits
 
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
-    fallDiv.append(produceDiv) 
+    fallDiv.append(produceDiv)
 }
 
 function renderWinter(someProduce) {
@@ -125,8 +125,8 @@ function renderWinter(someProduce) {
     const produceBenefits = document.createElement('p')
     produceName.innerText = someProduce.name
     produceImage.src = someProduce.image
-    produceVitamins.innerText = "Vitamins & Nutrients: " + someProduce.vitamins
-    produceBenefits.innerText = "Health Benefits: " + someProduce.benefits
+    produceVitamins.innerText = "Vitamins & Nutrients:   " + someProduce.vitamins
+    produceBenefits.innerText = "Health Benefits:   " + someProduce.benefits
 
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
@@ -142,12 +142,12 @@ function renderSpring(someProduce) {
     const produceBenefits = document.createElement('p')
     produceName.innerText = someProduce.name
     produceImage.src = someProduce.image
-    produceVitamins.innerText = "Vitamins & Nutrients: " + someProduce.vitamins
-    produceBenefits.innerText = "Health Benefits: " + someProduce.benefits
+    produceVitamins.innerText = "Vitamins & Nutrients:   " + someProduce.vitamins
+    produceBenefits.innerText = "Health Benefits:   " + someProduce.benefits
 
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
-    springDiv.append(produceDiv) 
+    springDiv.append(produceDiv)
 }
 
 // Mouseover Event
@@ -185,6 +185,7 @@ fallProduce.addEventListener('mouseout', () => {
 const springProduce = document.getElementById("springproduce")
 springProduce.addEventListener('mouseover', () => {
     springProduce.style.backgroundImage = "url(https://images.unsplash.com/photo-1587570575321-050120f1bb4a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)"
+
 })
 
 springProduce.addEventListener('mouseout', () => {
@@ -194,10 +195,10 @@ springProduce.addEventListener('mouseout', () => {
 
 
 // show cards on click
-let addSummerCard = false 
-let addFallCard = false 
-let addSpringCard = false 
-let addWinterCard = false 
+let addSummerCard = false
+let addFallCard = false
+let addSpringCard = false
+let addWinterCard = false
 
 summerProduce.addEventListener('click', () => {
     addSummerCard = !addSummerCard;

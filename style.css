@@ -2,6 +2,8 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
+    color: rgb(23, 42, 58);
+    font-family: 'Helvetica', sans-serif;
 }
 
 h2 {
@@ -28,31 +30,32 @@ h2 {
 }
 
 #summerproduce {
-    background-color: rgb(240, 220, 7);
-    color: white;
-    box-shadow: 3px 4px orange;
+    background-color: rgb(244, 194, 114);
+
 
 }
 
 #fallproduce {
-    background-color: orange;
+    background-color: rgb(178, 110, 99);
 }
 
 #winterproduce {
-    background-color: aqua;
+    background-color: #87bcde;
 }
 
 #springproduce {
-    background-color: rgb(11, 218, 14);
+    background-color: rgb(119, 178, 140);
 }
 
 #header {
-    color: white;
-    background-color: violet ;
+    color: rgb(23, 42, 58);
+    background-color: rgb(237, 226, 206);
     text-align: center;
     padding: 20px;
-    font-family: 'Helvetica', sans-serif;
+}
 
+#header p {
+    font-size: larger;
 }
 
 img {
@@ -63,27 +66,28 @@ img {
 
 #produce-form {
     display: none;
-    background-color: violet;
+    background-color: rgb(237, 226, 206);
     text-align: center;
     border: solid;
-    border-color: violet;
-    
+    border-color: rgb(237, 226, 206);
+
 
 }
 
 #btn {
-    background-color: violet;
+    background-color: rgb(237, 226, 206);
     margin: 0px;
     height: 50px;
-    color: white;
+    color: rgb(23, 42, 58);
 }
 
 #new-produce-btn {
-    background-color: rgb(161, 15, 117);
+    background-color: rgb(210, 201, 186);
     height: 40px;
-    border: solid white;
-    color: white;
+    border: solid rgb(23, 42, 58);
+    color: rgb(23, 42, 58);
     border-radius: 12px;
+    font-size: large;
 }
 
 .card {
@@ -96,8 +100,9 @@ img {
     display: inline-grid;
     margin: 1vh 1vw;
     margin-top: 0px;
-    box-shadow: 3px 4px #e04b52;
-    background-color: whitesmoke;
+    box-shadow: 3px 4px rgb(237, 226, 206);
+    background-color: rgb(23, 42, 58);
+    color: rgb(237, 226, 206);
 
 
 }
@@ -130,5 +135,5 @@ p {
 #produce-form h3 {
     margin: 0;
     text-align: center;
-    color: white;
+    color: rgb(23, 42, 58);
 }

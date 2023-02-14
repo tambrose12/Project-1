@@ -8,9 +8,15 @@
         },
         {
             "name": "Honeydew Melon",
-            "vitamins": "C, B vitamins, Potassium",
+            "vitamins": "C, B, Potassium",
             "benefits": "reduces blood-pressure, source of electrolytes, immune support",
             "image": "https://www.healthifyme.com/blog/wp-content/uploads/2022/02/shutterstock_1431636062-1.jpg"
+        },
+        {
+            "name": "Magic Bananas",
+            "vitamins": "CSS, JS, HTML",
+            "benefits": "invokes functions",
+            "image": "https://miro.medium.com/max/1400/1*311R5bwmvjL2umIvYynjaQ.jpeg"
         }
     ],
     "fall": [
