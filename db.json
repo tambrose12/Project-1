@@ -38,11 +38,11 @@
       "image": "https://images.unsplash.com/photo-1632510235224-76cb36e616cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
     },
     {
-        "id": 3,
-        "name": "Potato",
-        "vitamins": "HTML" , 
-        "benefits": "useful for coding examples",
-        "image": "https://www.google.com/url?sa=i&url=http%3A%2F%2Ft0.gstatic.com%2Flicensed-image%3Fq%3Dtbn%3AANd9GcTUNYRJGfr6dAmrrvtz8mF5qV0ojVV9cuEFzswwOcfqxd4EDeDD05eO-KSs2uLidN92YVgeCdcpdthCF4E&psig=AOvVaw2JgdxeCfCHGvY8Y38vX-yD&ust=1676505274671000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCID4mPyalv0CFQAAAAAdAAAAABAE "
+      "id": 3,
+      "name": "Potato",
+      "vitamins": "HTML",
+      "benefits": "useful for coding examples",
+      "image": "https://www.google.com/url?sa=i&url=http%3A%2F%2Ft0.gstatic.com%2Flicensed-image%3Fq%3Dtbn%3AANd9GcTUNYRJGfr6dAmrrvtz8mF5qV0ojVV9cuEFzswwOcfqxd4EDeDD05eO-KSs2uLidN92YVgeCdcpdthCF4E&psig=AOvVaw2JgdxeCfCHGvY8Y38vX-yD&ust=1676505274671000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCID4mPyalv0CFQAAAAAdAAAAABAE "
     }
   ],
   "winter": [
@@ -61,11 +61,11 @@
       "image": "https://images.unsplash.com/photo-1582287014914-1db836ccf0f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
     },
     {
-     "id": 3,
-     "name": "Leeks",
-     "vitamins": "antioxidants, K",
-     "benefits": "eye & bone health, anti-inflammatory properties",
-     "image": "https://images.unsplash.com/photo-1568121596907-4abfb696b718?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      "id": 3,
+      "name": "Leeks",
+      "vitamins": "antioxidants, K",
+      "benefits": "eye & bone health, anti-inflammatory properties",
+      "image": "https://images.unsplash.com/photo-1568121596907-4abfb696b718?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
     }
   ],
   "spring": [

@@ -1,32 +1,27 @@
-
+//fetches from db.json 
 fetch("http://localhost:3000/summer")
     .then(r => r.json())
-    .then(summerArray => summerArray.forEach((summerItem) => {
-        renderSummer(summerItem)
-    }
-    ))
+    .then(summerArray => { 
+        summerArray.forEach(renderSummer)
+    })
 
 fetch("http://localhost:3000/fall")
     .then(r => r.json())
-    .then(fallArray => fallArray.forEach((fallItem) => {
-        renderFall(fallItem)
-    }
-    ))
+    .then(fallArray => {
+        fallArray.forEach(renderFall)
+    })
 
 fetch("http://localhost:3000/winter")
     .then(r => r.json())
-    .then(winterArray => winterArray.forEach((winterItem) => {
-        renderWinter(winterItem)
-    }
-    ))
+    .then(winterArray => {
+        winterArray.forEach(renderWinter)
+    })
 
 fetch("http://localhost:3000/spring")
     .then(r => r.json())
-    .then(springArray => springArray.forEach((springItem) => {
-        renderSpring(springItem)
-    }
-    ))
-
+    .then(springArray => {
+        springArray.forEach(renderSpring)
+    })
 
 const summerDiv = document.getElementById('summer')
 const fallDiv = document.getElementById('fall')
