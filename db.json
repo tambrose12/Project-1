@@ -12,7 +12,7 @@
       "name": "Honeydew Melon",
       "vitamins": "C, B, Potassium",
       "benefits": "reduces blood-pressure, source of electrolytes, immune support",
-      "image": "https://www.healthifyme.com/blog/wp-content/uploads/2022/02/shutterstock_1431636062-1.jpg"
+      "image": "https://images.unsplash.com/photo-1596273312428-43e582609a2a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
     },
     {
       "id": 3,
@@ -35,7 +35,7 @@
       "name": "Figs",
       "vitamins": "A, C, Calcium",
       "benefits": "reduces high blood-pressure, increases bone density, improves digestion",
-      "image": "https://images.unsplash.com/photo-1601379760607-78be3d4ff432?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zmlnc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60ß"
+      "image": "https://images.unsplash.com/photo-1632510235224-76cb36e616cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
     },
     {
         "id": 3,
@@ -58,7 +58,14 @@
       "name": "Lemons",
       "vitamins": "C, Citric Acid, Iron",
       "benefits": "anemia prevention, kidney stone prevention, immune support",
-      "image": "https://images.unsplash.com/photo-1587324438673-56c78a866b15?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGVtb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+      "image": "https://images.unsplash.com/photo-1582287014914-1db836ccf0f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    },
+    {
+     "id": 3,
+     "name": "Leeks",
+     "vitamins": "antioxidants, K",
+     "benefits": "eye & bone health, anti-inflammatory properties",
+     "image": "https://images.unsplash.com/photo-1568121596907-4abfb696b718?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
     }
   ],
   "spring": [
@@ -75,6 +82,13 @@
       "vitamins": "Potassium, Iron",
       "benefits": "rich in antioxidants and omega-3 fatty-acids",
       "image": "https://images.unsplash.com/photo-1592018525569-95f358a7cc60?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGZpZGRsZWhlYWQlMjBmZXJuc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      "id": 3,
+      "name": "Pineapple",
+      "vitamins": "Manganese, C, antioxidants",
+      "benefits": "anti-inflammatory, digestion",
+      "image": "https://images.unsplash.com/photo-1490885578174-acda8905c2c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
     }
   ]
 }
