@@ -87,9 +87,20 @@ img {
     border: solid rgb(23, 42, 58);
     color: rgb(23, 42, 58);
     border-radius: 12px;
-    font-size: large;
+    font-size: large; 
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
 }
 
+button:hover {
+    background: linear-gradient(to bottom right, #aaffa9, #91d3e4);
+}
+  
+button:active {
+    background: linear-gradient(to bottom right, #4CAF50, #aaffa9);
+}
+  
 .card {
     text-align: center;
     border: grey solid 1px;
@@ -103,8 +114,6 @@ img {
     box-shadow: 3px 4px rgb(237, 226, 206);
     background-color: rgb(23, 42, 58);
     color: rgb(237, 226, 206);
-
-
 }
 
 #summer {
@@ -137,26 +146,3 @@ p {
     text-align: center;
     color: rgb(23, 42, 58);
 }
-
-button {
-    background-color: #5fade0; 
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-out;
-  }
-  
-  button:hover {
-    background: linear-gradient(to bottom right, #aaffa9, #91d3e4);
-  }
-  
-  button:active {
-    background: linear-gradient(to bottom right, #4CAF50, #aaffa9);
-  }
-  

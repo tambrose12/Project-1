@@ -69,12 +69,16 @@ form.addEventListener('submit', (e) => {
     }
     if (seasonOne == 'summer') {
         renderSummer(newProduce)
+        postToSummer(newProduce)
     } else if (seasonOne == 'spring') {
         renderSpring(newProduce)
+        postToSpring(newProduce)
     } else if (seasonOne == 'winter') {
         renderWinter(newProduce)
+        postToWinter(newProduce)
     } else if (seasonOne == 'fall') {
         renderFall(newProduce)
+        postToFall(newProduce)
     }
 
     e.target.reset()
@@ -235,3 +239,53 @@ winterProduce.addEventListener('click', () => {
         winterDiv.style.display = "none";
     }
 })
+
+//post request functions defined
+function postToSummer(e) {
+    fetch("http://localhost:3000/summer", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(e),
+    })
+        .then(r => r.json())
+        .then(e => console.log("success", e))
+}
+
+function postToWinter(e) {
+    fetch("http://localhost:3000/winter", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(e),
+    })
+        .then(r => r.json())
+        .then(e => console.log("success", e))
+}
+
+function postToFall(e) {
+    fetch("http://localhost:3000/fall", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(e),
+    })
+        .then(r => r.json())
+        .then(e => console.log("success", e))
+}
+
+function postToSpring(e) {
+    fetch("http://localhost:3000/spring", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(e),
+    })
+        .then(r => r.json())
+        .then(e => console.log("success", e))
+}
+
