@@ -42,8 +42,8 @@ const form = document.getElementById('produce-form')
 addBtn.addEventListener('click', () => {
     addProduce = !addProduce;
     if (addProduce) {
-        form.style.display = "block";
-        if (form.style.display = "block") {
+        form.style.display = "flex";
+        if (form.style.display = "flex") {
             addBtn.textContent = "Hide Form"
         }
     } else {
@@ -52,8 +52,6 @@ addBtn.addEventListener('click', () => {
             addBtn.textContent = "Add New Produce"
         }
     }
-
-
 })
 
 //submit new produce form
