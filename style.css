@@ -6,8 +6,16 @@ body {
     font-family: 'Helvetica', sans-serif;
 }
 
+h1 {
+    font-size: 50px;
+    text-shadow: rgb(237, 226, 206) 1px 0px 10px;
+    margin-bottom: 10px;
+}
+
+
 h2 {
     font-size: xx-large;
+    text-shadow: rgb(237, 226, 206) 1px 0px 10px;
 }
 
 #container {
@@ -24,9 +32,11 @@ h2 {
     text-align: center;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0;
+    cursor: pointer;
 }
 
 #summerproduce {
@@ -48,21 +58,25 @@ h2 {
 #header {
     color: rgb(23, 42, 58);
     background-color: rgb(237, 226, 206);
-    background-Image: url("https://t3.ftcdn.net/jpg/02/17/21/68/240_F_217216886_zmsKmNGEcGGs5cKgmL6vM6aCUfzY9OQy.jpg");
+    background-Image: url("https://www.bamco.com/wp-content/uploads/2017/02/Fresh-market-fruits-and-vegetables-164144253_header.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    text-align: center;
+    text-align: right;
     padding: 20px;
+    text-shadow: rgb(237, 226, 206) 1px 0px 10px;
 }
 
 #header p {
-    font-size: larger;
+    font-size: 25px;
+    margin-bottom: 45px;
+    font-weight: 500;
 }
 
 img {
     width: 8vw;
     height: auto;
     justify-self: center;
+    min-width: 100px;
 }
 
 #produce-form {
@@ -98,6 +112,10 @@ input[type=submit] {
     align-content: center;
 }
 
+.submit:hover {
+    background: linear-gradient(to bottom right, #aaffa9, #91d3e4);
+}
+
 label {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -117,23 +135,24 @@ label {
     border: solid rgb(23, 42, 58);
     color: rgb(23, 42, 58);
     border-radius: 12px;
-    font-size: large; 
+    font-size: large;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.2s ease-out;
     width: 25%;
     margin-top: 7px;
     margin-bottom: 10px;
+    min-width: 250px;
 }
 
 button:hover {
     background: linear-gradient(to bottom right, #aaffa9, #91d3e4);
 }
-  
+
 button:active {
     background: linear-gradient(to bottom right, #4CAF50, #aaffa9);
 }
-  
+
 .card {
     text-align: center;
     border: grey solid 1px;
@@ -141,6 +160,8 @@ button:active {
     padding-top: 5px;
     width: 15vw;
     height: 30vh;
+    min-width: 200px;
+    min-height: 250px;
     display: inline-grid;
     margin: 1vh 1vw;
     margin-top: 0px;
@@ -174,4 +195,15 @@ p {
     margin: 3px;
 }
 
+footer {
+    height: auto;
+    background-color: rgb(237, 226, 206);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: large;
+}
 
+footer img {
+    padding-top: 10px;
+}
