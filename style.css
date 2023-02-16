@@ -6,16 +6,43 @@ body {
     font-family: 'Helvetica', sans-serif;
 }
 
+#header {
+    color: rgb(23, 42, 58);
+    background-color: rgb(237, 226, 206);
+    background-Image: url("https://www.bamco.com/wp-content/uploads/2017/02/Fresh-market-fruits-and-vegetables-164144253_header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: right;
+    padding: 20px;
+    text-shadow: rgb(237, 226, 206) 1px 0px 10px;
+}
+
+#header p {
+    font-size: 25px;
+    margin-bottom: 45px;
+    font-weight: 500;
+}
+
 h1 {
     font-size: 50px;
     text-shadow: rgb(237, 226, 206) 1px 0px 10px;
     margin-bottom: 10px;
 }
 
-
 h2 {
-    font-size: xx-large;
+    font-size: 8vw;
+    color: rgb(23, 42, 58);
+}
+
+h3 {
+    margin: 3px;
+}
+
+h4 {
     text-shadow: rgb(237, 226, 206) 1px 0px 10px;
+    font-size: xx-large;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 #container {
@@ -26,6 +53,9 @@ h2 {
 }
 
 .quarter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50%;
     height: auto;
     min-height: 400px;
@@ -36,7 +66,7 @@ h2 {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0;
-    cursor: pointer;
+    cursor: pointer;  
 }
 
 #summerproduce {
@@ -55,33 +85,40 @@ h2 {
     background-color: rgb(119, 178, 140);
 }
 
-#header {
+#btn {
+    background-color:rgb(237, 226, 206);
+    margin: 0px;
+    height: 50px;
     color: rgb(23, 42, 58);
-    background-color: rgb(237, 226, 206);
-    background-Image: url("https://www.bamco.com/wp-content/uploads/2017/02/Fresh-market-fruits-and-vegetables-164144253_header.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: right;
-    padding: 20px;
-    text-shadow: rgb(237, 226, 206) 1px 0px 10px;
 }
 
-#header p {
-    font-size: 25px;
-    margin-bottom: 45px;
-    font-weight: 500;
+#new-produce-btn {
+    background-color: rgb(210, 201, 186);
+    height: 40px;
+    border: solid rgb(23, 42, 58);
+    color: rgb(23, 42, 58);
+    border-radius: 12px;
+    font-size: large;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
+    width: 25%;
+    margin-top: 7px;
+    margin-bottom: 10px;
+    min-width: 250px;
 }
 
-img {
-    width: 8vw;
-    height: auto;
-    justify-self: center;
-    min-width: 100px;
+button:hover {
+    background: linear-gradient(to bottom right, #aaffa9, #91d3e4);
+}
+
+button:active {
+    background: linear-gradient(to bottom right, #4CAF50, #aaffa9);
 }
 
 #produce-form {
     display: none;
-    background-color: rgb(237, 226, 206);
+    background-color:rgb(237, 226, 206);
     border: solid;
     border-color: rgb(237, 226, 206);
     flex-direction: column;
@@ -89,7 +126,7 @@ img {
 }
 
 #produce-form h3 {
-    margin: 0;
+    padding-top: 10px;
     color: rgb(23, 42, 58);
 }
 
@@ -122,37 +159,6 @@ label {
     padding-bottom: 0px;
 }
 
-#btn {
-    background-color: rgb(237, 226, 206);
-    margin: 0px;
-    height: 50px;
-    color: rgb(23, 42, 58);
-}
-
-#new-produce-btn {
-    background-color: rgb(210, 201, 186);
-    height: 40px;
-    border: solid rgb(23, 42, 58);
-    color: rgb(23, 42, 58);
-    border-radius: 12px;
-    font-size: large;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.2s ease-out;
-    width: 25%;
-    margin-top: 7px;
-    margin-bottom: 10px;
-    min-width: 250px;
-}
-
-button:hover {
-    background: linear-gradient(to bottom right, #aaffa9, #91d3e4);
-}
-
-button:active {
-    background: linear-gradient(to bottom right, #4CAF50, #aaffa9);
-}
-
 .card {
     text-align: center;
     border: grey solid 1px;
@@ -165,11 +171,22 @@ button:active {
     display: inline-grid;
     margin: 1vh 1vw;
     margin-top: 0px;
+    margin-bottom: 15px;
     box-shadow: 3px 4px rgb(237, 226, 206);
     background-color: rgb(23, 42, 58);
     color: rgb(237, 226, 206);
 }
 
+img {
+    width: 8vw;
+    height: auto;
+    justify-self: center;
+    min-width: 100px;
+}
+
+p {
+    margin: 3px;
+}
 
 #summer {
     display: none
@@ -185,14 +202,6 @@ button:active {
 
 #winter {
     display: none
-}
-
-h3 {
-    margin: 3px;
-}
-
-p {
-    margin: 3px;
 }
 
 footer {
