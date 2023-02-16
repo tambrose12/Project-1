@@ -1,7 +1,7 @@
 //fetches from db.json 
 fetch("http://localhost:3000/summer")
     .then(r => r.json())
-    .then(summerArray => { 
+    .then(summerArray => {
         summerArray.forEach(renderSummer)
     })
 
@@ -88,12 +88,14 @@ function renderSummer(someProduce) {
     const produceBenefits = document.createElement('p')
     produceName.innerText = someProduce.name
     produceImage.src = someProduce.image
+    produceImage.alt = someProduce.name + " image"
     produceVitamins.textContent = "Vitamins & Nutrients:   " + someProduce.vitamins
     produceBenefits.textContent = "Health Benefits:   " + someProduce.benefits
 
     produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
 
     summerDiv.append(produceDiv)
+
 }
 
 function renderFall(someProduce) {
@@ -105,6 +107,7 @@ function renderFall(someProduce) {
     const produceBenefits = document.createElement('p')
     produceName.innerText = someProduce.name
     produceImage.src = someProduce.image
+    produceImage.alt = someProduce.name + " image"
     produceVitamins.innerText = "Vitamins & Nutrients:   " + someProduce.vitamins
     produceBenefits.innerText = "Health Benefits:   " + someProduce.benefits
 
@@ -122,6 +125,7 @@ function renderWinter(someProduce) {
     const produceBenefits = document.createElement('p')
     produceName.innerText = someProduce.name
     produceImage.src = someProduce.image
+    produceImage.alt = someProduce.name + " image"
     produceVitamins.innerText = "Vitamins & Nutrients:   " + someProduce.vitamins
     produceBenefits.innerText = "Health Benefits:   " + someProduce.benefits
 
@@ -139,6 +143,7 @@ function renderSpring(someProduce) {
     const produceBenefits = document.createElement('p')
     produceName.innerText = someProduce.name
     produceImage.src = someProduce.image
+    produceImage.alt = someProduce.name + " image"
     produceVitamins.innerText = "Vitamins & Nutrients:   " + someProduce.vitamins
     produceBenefits.innerText = "Health Benefits:   " + someProduce.benefits
 
@@ -147,9 +152,14 @@ function renderSpring(someProduce) {
     springDiv.append(produceDiv)
 }
 
+
 // Mouseover Event
 
 const summerProduce = document.getElementById("summerproduce")
+const winterProduce = document.getElementById("winterproduce")
+const fallProduce = document.getElementById("fallproduce")
+const springProduce = document.getElementById("springproduce")
+
 summerProduce.addEventListener('mouseover', () => {
     summerProduce.style.backgroundImage = "url(https://images.unsplash.com/photo-1441981974669-8f9bc0978b64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)"
 })
@@ -159,7 +169,7 @@ summerProduce.addEventListener('mouseout', () => {
 
 })
 
-const winterProduce = document.getElementById("winterproduce")
+
 winterProduce.addEventListener('mouseover', () => {
     winterProduce.style.backgroundImage = "url(https://www.wilsonpeakproperties.com/custimages/Big_Sky_Resort_Winter.jpeg)"
 })
@@ -169,7 +179,7 @@ winterProduce.addEventListener('mouseout', () => {
 
 })
 
-const fallProduce = document.getElementById("fallproduce")
+
 fallProduce.addEventListener('mouseover', () => {
     fallProduce.style.backgroundImage = "url(https://images.unsplash.com/photo-1509224863479-ab583ee78692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80)"
 })
@@ -179,7 +189,7 @@ fallProduce.addEventListener('mouseout', () => {
 
 })
 
-const springProduce = document.getElementById("springproduce")
+
 springProduce.addEventListener('mouseover', () => {
     springProduce.style.backgroundImage = "url(https://images.unsplash.com/photo-1587570575321-050120f1bb4a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)"
 
@@ -281,4 +291,8 @@ function postToSpring(e) {
         .then(r => r.json())
         .then(e => console.log("success", e))
 }
+
+
+// const cards = document.querySelectorAll('.card')
+// console.log(cards)
 
