@@ -1,32 +1,40 @@
-//fetches from db.json 
-fetch('http://localhost:3000/summer')
+fetch("http://localhost:3000/produce")
     .then(r => r.json())
-    .then(summerArray => {
-        summerArray.forEach(renderSummer)
-    })
-
-fetch('http://localhost:3000/fall')
-    .then(r => r.json())
-    .then(fallArray => {
-        fallArray.forEach(renderFall)
-    })
-
-fetch('http://localhost:3000/winter')
-    .then(r => r.json())
-    .then(winterArray => {
-        winterArray.forEach(renderWinter)
-    })
-
-fetch('http://localhost:3000/spring')
-    .then(r => r.json())
-    .then(springArray => {
-        springArray.forEach(renderSpring)
+    .then(produceArray => {
+        produceArray.forEach(makeProduceObj)
     })
 
 const summerDiv = document.getElementById('summer')
 const fallDiv = document.getElementById('fall')
 const winterDiv = document.getElementById('winter')
 const springDiv = document.getElementById('spring')
+
+function makeProduceObj(someProduce) {
+    const produceDiv = document.createElement('div')
+    produceDiv.className = 'card'
+    const produceName = document.createElement('h3')
+    const produceImage = document.createElement('img')
+    const produceVitamins = document.createElement('p')
+    const produceBenefits = document.createElement('p')
+    produceName.innerText = someProduce.name
+    produceImage.src = someProduce.image
+    produceImage.alt = someProduce.name + ' image'
+    produceVitamins.textContent = 'Vitamins & Nutrients: ' + someProduce.vitamins
+    produceBenefits.textContent = 'Health Benefits: ' + someProduce.benefits
+
+    produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
+
+    let seasonOne = someProduce.season
+    if (seasonOne == 'summer') {
+        summerDiv.append(produceDiv)
+    } else if (seasonOne == 'spring') {
+        springDiv.append(produceDiv)
+    } else if (seasonOne == 'winter') {
+        winterDiv.append(produceDiv)
+    } else if (seasonOne == 'fall') {
+        fallDiv.append(produceDiv)
+    }
+}
 
 //hide and seek form
 let addProduce = false
@@ -49,115 +57,36 @@ addBtn.addEventListener('click', () => {
     }
 })
 
-//submit new produce form
+//Form
 form.addEventListener('submit', (e) => {
     e.preventDefault()
-    let season = e.target.season.value
-    let seasonOne = season.toLowerCase()
+    let seasonInput = e.target.season.value
+    let seasonOne = seasonInput.toLowerCase()
     const newProduce = {
         name: e.target.name.value,
         vitamins: e.target.vitamins.value,
         benefits: e.target.benefits.value,
-        image: e.target.image.value
+        image: e.target.image.value,
+        season: seasonOne
     }
+
     if (seasonOne == 'summer') {
-        renderSummer(newProduce)
-        postToSummer(newProduce)
+        //makeProduceObj(newProduce)
         alert("Your produce has been added to Summer!")
     } else if (seasonOne == 'spring') {
-        renderSpring(newProduce)
-        postToSpring(newProduce)
         alert("Your produce has been added to Spring!")
     } else if (seasonOne == 'winter') {
-        renderWinter(newProduce)
-        postToWinter(newProduce)
         alert("Your produce has been added to Winter!")
     } else if (seasonOne == 'fall') {
-        renderFall(newProduce)
-        postToFall(newProduce)
         alert("Your produce has been added to Fall!")
     } else {
         alert('Season must be: summer, spring, winter, or fall.')
     }
 
-
+    makeProduceObj(newProduce)
+    postToProduce(newProduce)
     e.target.reset()
-
 })
-
-//functions for rendering produce objects to page
-function renderSummer(someProduce) {
-    const produceDiv = document.createElement('div')
-    produceDiv.className = 'card'
-    const produceName = document.createElement('h3')
-    const produceImage = document.createElement('img')
-    const produceVitamins = document.createElement('p')
-    const produceBenefits = document.createElement('p')
-    produceName.innerText = someProduce.name
-    produceImage.src = someProduce.image
-    produceImage.alt = someProduce.name + ' image'
-    produceVitamins.textContent = 'Vitamins & Nutrients: ' + someProduce.vitamins
-    produceBenefits.textContent = 'Health Benefits: ' + someProduce.benefits
-
-    produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
-
-    summerDiv.append(produceDiv)
-}
-
-function renderFall(someProduce) {
-    const produceDiv = document.createElement('div')
-    produceDiv.className = 'card'
-    const produceName = document.createElement('h3')
-    const produceImage = document.createElement('img')
-    const produceVitamins = document.createElement('p')
-    const produceBenefits = document.createElement('p')
-    produceName.innerText = someProduce.name
-    produceImage.src = someProduce.image
-    produceImage.alt = someProduce.name + ' image'
-    produceVitamins.innerText = 'Vitamins & Nutrients: ' + someProduce.vitamins
-    produceBenefits.innerText = 'Health Benefits: ' + someProduce.benefits
-
-    produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
-
-    fallDiv.append(produceDiv)
-}
-
-function renderWinter(someProduce) {
-    const produceDiv = document.createElement('div')
-    produceDiv.className = "card"
-    const produceName = document.createElement('h3')
-    const produceImage = document.createElement('img')
-    const produceVitamins = document.createElement('p')
-    const produceBenefits = document.createElement('p')
-    produceName.innerText = someProduce.name
-    produceImage.src = someProduce.image
-    produceImage.alt = someProduce.name + ' image'
-    produceVitamins.innerText = 'Vitamins & Nutrients: ' + someProduce.vitamins
-    produceBenefits.innerText = 'Health Benefits: ' + someProduce.benefits
-
-    produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
-
-    winterDiv.append(produceDiv)
-}
-
-function renderSpring(someProduce) {
-    const produceDiv = document.createElement('div')
-    produceDiv.className = 'card'
-    const produceName = document.createElement('h3')
-    const produceImage = document.createElement('img')
-    const produceVitamins = document.createElement('p')
-    const produceBenefits = document.createElement('p')
-    produceName.innerText = someProduce.name
-    produceImage.src = someProduce.image
-    produceImage.alt = someProduce.name + ' image'
-    produceVitamins.innerText = 'Vitamins & Nutrients: ' + someProduce.vitamins
-    produceBenefits.innerText = 'Health Benefits: ' + someProduce.benefits
-
-    produceDiv.append(produceName, produceImage, produceVitamins, produceBenefits)
-
-    springDiv.append(produceDiv)
-}
-
 
 // Mouseover Event
 const summerProduce = document.getElementById('summerproduce')
@@ -167,11 +96,11 @@ const springProduce = document.getElementById('springproduce')
 
 summerProduce.addEventListener('mouseover', () => {
     summerProduce.style.backgroundImage = 'url(https://images.unsplash.com/photo-1441981974669-8f9bc0978b64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)'
+    console.log('mouseover')
 })
 
 summerProduce.addEventListener('mouseout', () => {
     summerProduce.style.backgroundImage = ''
-
 })
 
 winterProduce.addEventListener('mouseover', () => {
@@ -189,7 +118,6 @@ fallProduce.addEventListener('mouseover', () => {
 
 fallProduce.addEventListener('mouseout', () => {
     fallProduce.style.backgroundImage = ''
-
 })
 
 springProduce.addEventListener('mouseover', () => {
@@ -198,7 +126,6 @@ springProduce.addEventListener('mouseover', () => {
 
 springProduce.addEventListener('mouseout', () => {
     springProduce.style.backgroundImage = ''
-
 })
 
 // show cards on click
@@ -256,45 +183,9 @@ winterProduce.addEventListener('click', () => {
     }
 })
 
-//post request functions defined
-function postToSummer(e) {
-    fetch('http://localhost:3000/summer', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(e),
-    })
-        .then(r => r.json())
-        .then(e => console.log('success', e))
-}
-
-function postToWinter(e) {
-    fetch('http://localhost:3000/winter', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(e),
-    })
-        .then(r => r.json())
-        .then(e => console.log('success', e))
-}
-
-function postToFall(e) {
-    fetch('http://localhost:3000/fall', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(e),
-    })
-        .then(r => r.json())
-        .then(e => console.log('success', e))
-}
-
-function postToSpring(e) {
-    fetch('http://localhost:3000/spring', {
+//Post request
+function postToProduce(e) {
+    fetch('http://localhost:3000/produce', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
