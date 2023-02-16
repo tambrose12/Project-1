@@ -63,15 +63,19 @@ form.addEventListener('submit', (e) => {
     if (seasonOne == 'summer') {
         renderSummer(newProduce)
         postToSummer(newProduce)
+        alert("Your produce has been added to Summer!")
     } else if (seasonOne == 'spring') {
         renderSpring(newProduce)
         postToSpring(newProduce)
+        alert("Your produce has been added to Spring!")
     } else if (seasonOne == 'winter') {
         renderWinter(newProduce)
         postToWinter(newProduce)
+        alert("Your produce has been added to Winter!")
     } else if (seasonOne == 'fall') {
         renderFall(newProduce)
         postToFall(newProduce)
+        alert("Your produce has been added to Fall!")
     } else {
         alert('Season must be: summer, spring, winter, or fall.')
     }
@@ -212,10 +216,10 @@ summerProduce.addEventListener('click', () => {
     addSummerCard = !addSummerCard;
     if (addSummerCard) {
         summerDiv.style.display = 'block';
-        summerH2.style.display= 'none';
+        summerH2.style.display = 'none';
     } else {
         summerDiv.style.display = 'none';
-        summerH2.style.display= 'block';
+        summerH2.style.display = 'block';
     }
 })
 
@@ -223,10 +227,10 @@ fallProduce.addEventListener('click', () => {
     addFallCard = !addFallCard;
     if (addFallCard) {
         fallDiv.style.display = 'block';
-        fallH2.style.display= 'none';
+        fallH2.style.display = 'none';
     } else {
         fallDiv.style.display = 'none';
-        fallH2.style.display= 'block';
+        fallH2.style.display = 'block';
     }
 })
 
@@ -234,10 +238,10 @@ springProduce.addEventListener('click', () => {
     addSpringCard = !addSpringCard;
     if (addSpringCard) {
         springDiv.style.display = 'block';
-        springH2.style.display= 'none';
+        springH2.style.display = 'none';
     } else {
         springDiv.style.display = 'none';
-        springH2.style.display= 'block';
+        springH2.style.display = 'block';
     }
 })
 
@@ -245,10 +249,10 @@ winterProduce.addEventListener('click', () => {
     addWinterCard = !addWinterCard;
     if (addWinterCard) {
         winterDiv.style.display = 'block';
-        winterH2.style.display= 'none';
+        winterH2.style.display = 'none';
     } else {
         winterDiv.style.display = 'none';
-        winterH2.style.display= 'block';
+        winterH2.style.display = 'block';
     }
 })
 

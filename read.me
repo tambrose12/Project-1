@@ -1,28 +1,60 @@
-Steps to take:
-
-3 event listeners:
-submit - done
-used click - done
-need to implement mouseover - done
-Array iteration - done
-MVP working - done
-Form reset after submitting - done
-CSS to create 4 quadrants - done
-Show and hide produce when clicked on, organize produce as cards - done
-Add Potatoes!!! to db.json - done
-sytlistic choices implemented - done
-Style the Form and add input "titles" - done
+*Strategy, Timeline, and Tips
+    
+    -Plan to complete all MVP requirements by the end of day 1. MVP was met day 1, spent day 2 and 3 
+    implementing stylistic choices and cleaning up our layout.
 
 
-Strategy, Timeline, and Tips
+*Project Requirements:
+Your app must be a HTML/CSS/JS frontend that accesses data from a public API or from a db.json file using json-server. 
+Your API or db.json should return a collection of at least 5 objects with each object having at least 3 attributes. 
+All interactions between the client and the API should be handled asynchronously and use JSON as the communication format. 
+Try to avoid using an API that requires a key. APIs that are free and require no authorization will be easiest to use. 
+For ideas, see this list of no-auth APIsLinks to an external site.. If you would like to use an API that requires a key, 
+please consult with your instructor on how to protect that key. NEVER push your API key to github!
+    
+    -Created our own db.json with arrays of objects.
+
+
+Your entire app must run on a single page. There should be NO redirects or reloads. In other words, your project will contain a single HTML file.
+    
+    -Entire App runs on a single page.
+
+
+Use at least 3 distinct event listenersLinks to an external site. (3 events of different types) that enable interactivity. 
+What this means is that, if you had 3 click events, that would only count as 1 distinct event and you would need to add at least 2 more. 
+Think search or filter functionality, toggling dark/light mode, upvoting posts, etc. Each of your event listeners should also have its own 
+unique callback function. These must be added using JavaScript's .addEventListener() method. Events embedded into HTML elements and CSS will 
+not count toward the total. Please ask your instructor if you have questions regarding this requirement.
+    
+    -'Click' event used an button to show/hide form.
+    -'Submit' event used on form submission.
+    -'Mouseover' event added to show pictures over seasons on hover, & 'mouseout' used to make image disappear when not hovering season div.
+    -'Click' event used on each season div to show contents/produce cards.
+
+
+Your project must implement at least one instance of array iteration using available array methods (map, forEach, filter, etc). 
+Manipulating your API data in some way should present an opportunity to implement your array iteration.
+    
+    -forEach used in each fetch function to iterate through the array and render each produce card.
+
+
+Follow good coding practices. Keep your code DRY (Do not repeat yourself) by utilizing functions to abstract repetitive code.
+    
+    -We did our best, however, our code has to have separate render functions and events for each season div.
+
+
 Planning
 Plan out your features
 Develop user stories
 “As [ a user ], I want [ to perform this action ] so that [ I can accomplish this goal ].”
-Features should not need you there to explain them to users
-Plan out the structure of your JSON requests
+Features should not need you there to explain them to users.
+Plan out the structure of your JSON requests.
 
-Extras:
-- form field validation (lets users know if info is correct). 
-- Add in description paragraph for produce.
-- Adding a potential footer citing sources??
+    -Planned to set up our page with a header div at the top, a show/hide submission form below that, and 4 season divs below
+    that in quadrants. We sucessfully rendered our page to match our initial design sketch.
+    -“As a user of our page, I want to view produce in season based on season selected (summer, fall, winter, or spring).”
+    -Page is interactive and seems to be user friendly. Alerts added to tell users where their produce was added after 
+    sumbitting a new produce through the form. Button changes text between "Add New Produce" when form is hidden, and "Hide Form"
+    when form is visible. Input placeholders used to guide users on filling out the form. Used cursor: pointer; to show click-able features
+    and button:hover effects change color of buttons when hovered or active. 
+
