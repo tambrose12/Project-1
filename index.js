@@ -61,14 +61,23 @@ addBtn.addEventListener('click', () => {
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     let seasonInput = e.target.season.value
+    let nameInput = e.target.name.value
+    let vitaminInput = e.target.vitamins.value
+    let benefitInput = e.target.benefits.value
+    let imageInput = e.target.image.value
     let seasonOne = seasonInput.toLowerCase()
     const newProduce = {
-        name: e.target.name.value,
-        vitamins: e.target.vitamins.value,
-        benefits: e.target.benefits.value,
-        image: e.target.image.value,
+        name: nameInput,
+        vitamins: vitaminInput,
+        benefits: benefitInput,
+        image: imageInput,
         season: seasonOne
     }
+
+    if (nameInput == '' || vitaminInput == '' || benefitInput == '' || imageInput == '') {
+        alert("Please fill in all fields.")
+    }
+
 
     if (seasonOne == 'summer') {
         alert("Your produce has been added to Summer!")
