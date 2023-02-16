@@ -71,7 +71,6 @@ form.addEventListener('submit', (e) => {
     }
 
     if (seasonOne == 'summer') {
-        //makeProduceObj(newProduce)
         alert("Your produce has been added to Summer!")
     } else if (seasonOne == 'spring') {
         alert("Your produce has been added to Spring!")
