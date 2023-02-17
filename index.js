@@ -33,8 +33,6 @@ function makeProduceObj(someProduce) {
         winterDiv.append(produceDiv)
     } else if (seasonOne == 'fall') {
         fallDiv.append(produceDiv)
-    } else {
-        history.back()
     }
 }
 
@@ -92,6 +90,7 @@ form.addEventListener('submit', (e) => {
         alert("Your produce has been added to Fall!")
     } else {
         alert('Season must be: summer, spring, winter, or fall.')
+        return null
     }
 
     makeProduceObj(newProduce)
