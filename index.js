@@ -1,7 +1,7 @@
 fetch("http://localhost:3000/produce")
     .then(r => r.json())
     .then(produceArray => {
-        produceArray.forEach(makeProduceObj)
+        produceArray.forEach(renderProduce)
     })
 
 const summerDiv = document.getElementById('summer')
@@ -9,7 +9,7 @@ const fallDiv = document.getElementById('fall')
 const winterDiv = document.getElementById('winter')
 const springDiv = document.getElementById('spring')
 
-function makeProduceObj(someProduce) {
+function renderProduce(someProduce) {
     const produceDiv = document.createElement('div')
     produceDiv.className = 'card'
     const produceName = document.createElement('h3')
@@ -36,7 +36,7 @@ function makeProduceObj(someProduce) {
     }
 }
 
-//hide and seek form
+// hide and seek form
 let addProduce = false
 
 const addBtn = document.getElementById('new-produce-btn')
@@ -57,7 +57,7 @@ addBtn.addEventListener('click', () => {
     }
 })
 
-//Form
+// form
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     let seasonInput = e.target.season.value
@@ -75,30 +75,29 @@ form.addEventListener('submit', (e) => {
     }
 
     if (nameInput == '' || vitaminInput == '' || benefitInput == '' || imageInput == '') {
-        alert("Please fill in all fields.")
+        alert('Please fill in all fields.')
         return null;
     }
 
-
     if (seasonOne == 'summer') {
-        alert("Your produce has been added to Summer!")
+        alert('Your produce has been added to Summer!')
     } else if (seasonOne == 'spring') {
-        alert("Your produce has been added to Spring!")
+        alert('Your produce has been added to Spring!')
     } else if (seasonOne == 'winter') {
-        alert("Your produce has been added to Winter!")
+        alert('Your produce has been added to Winter!')
     } else if (seasonOne == 'fall') {
-        alert("Your produce has been added to Fall!")
+        alert('Your produce has been added to Fall!')
     } else {
         alert('Season must be: summer, spring, winter, or fall.')
         return null
     }
 
-    makeProduceObj(newProduce)
+    renderProduce(newProduce)
     postToProduce(newProduce)
     e.target.reset()
 })
 
-// Mouseover Event
+// mouseover & mouseout events
 const summerProduce = document.getElementById('summerproduce')
 const winterProduce = document.getElementById('winterproduce')
 const fallProduce = document.getElementById('fallproduce')
@@ -193,15 +192,13 @@ winterProduce.addEventListener('click', () => {
     }
 })
 
-//Post request
-function postToProduce(e) {
+// post request
+function postToProduce(newProduceObj) {
     fetch('http://localhost:3000/produce', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(e),
+        body: JSON.stringify(newProduceObj)
     })
-        .then(r => r.json())
-        .then(e => console.log('success', e))
 }
