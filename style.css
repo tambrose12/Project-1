@@ -142,7 +142,7 @@ input[type=text] {
 }
 
 input[type=submit] {
-    width: 100%;
+    width: 99%;
     background-color: rgb(210, 201, 186);
     border: solid rgb(23, 42, 58);
     cursor: pointer;

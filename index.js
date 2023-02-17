@@ -92,7 +92,6 @@ form.addEventListener('submit', (e) => {
         return null
     }
 
-    renderProduce(newProduce)
     postToProduce(newProduce)
     e.target.reset()
 })
@@ -200,5 +199,9 @@ function postToProduce(newProduceObj) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(newProduceObj)
+    })
+    .then(r => r.json())
+    .then(newProduceObj => {
+       renderProduce(newProduceObj)
     })
 }
