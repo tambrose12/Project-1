@@ -33,6 +33,8 @@ function makeProduceObj(someProduce) {
         winterDiv.append(produceDiv)
     } else if (seasonOne == 'fall') {
         fallDiv.append(produceDiv)
+    } else {
+        history.back()
     }
 }
 
@@ -76,6 +78,7 @@ form.addEventListener('submit', (e) => {
 
     if (nameInput == '' || vitaminInput == '' || benefitInput == '' || imageInput == '') {
         alert("Please fill in all fields.")
+        return null;
     }
 
 
